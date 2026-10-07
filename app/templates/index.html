@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QR Code Generator</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='style.css') }}"
+    >
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>QR Code Generator</h1>
+
+            <p class="description">
+                Enter text or a website URL to generate a QR code.
+            </p>
+
+            <form
+                action="/generate"
+                method="post"
+            >
+
+                <label for="data">
+                    Text or Website URL
+                </label>
+
+                <input
+                    type="text"
+                    id="data"
+                    name="data"
+                    placeholder="https://example.com"
+                    required
+                >
+
+                <button type="submit">
+                    Generate & Download QR Code
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
